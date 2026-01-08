@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Uppercase App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>🔥 Flask Uppercase Converter 🔥</h1>
+
+    <!-- Input Form -->
+    <form method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <br><br>
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if original_name %}
+        <hr>
+        <p><b>Original Name:</b> {{ original_name }}</p>
+        <p><b>UPPER CASE:</b> {{ upper_name }}</p>
+        <p><b>Length:</b> {{ length }} characters</p>
+    {% endif %}
+
+    <hr>
+    <p class="time">⏰ {{ time }}</p>
+</div>
+
+</body>
+</html>
